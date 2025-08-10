@@ -36,7 +36,7 @@ A simple web-based application that allows you to **hide messages inside images*
 ```
 
 ## 📸 Preview
-
+<img width="1904" height="1079" alt="image" src="https://github.com/user-attachments/assets/65cbe376-23da-4b90-840e-0dd627ab4904" />
 
 ## 📄 License
 
