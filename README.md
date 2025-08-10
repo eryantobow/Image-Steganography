@@ -14,7 +14,7 @@ A simple web-based application that allows you to **hide messages inside images*
 ## 🛠️ Technologies Used
 
 * **HTML5** – Structure of the app
-* **CSS3** – Styling a~nd layout
+* **CSS3** – Styling and layout
 * **JavaScript** – Encoding & decoding logic
 
 ## 🚀 How to Use
