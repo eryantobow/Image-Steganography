@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e8e8e8; /* Ensure text is visible against the background */
+}
+
+#canvas {
+    border: 1px solid black;
+}
+
+#myCanvas1{
+    display: none;
+}
+
+.outputdiv{
+    height: auto !important;
+}
+
+nav{
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe Script', 'Comic Sans MS', cursive, sans-serif; 
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    min-height: calc(100vh - 60px);
+    margin:    2% 0;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.5); /* rgba format with 50% opacity */
+    width: 70%;
+    height: 70%;
+    font-family: 'Segoe Script', 'Comic Sans MS', cursive, sans-serif; 
+    border-radius: 12px;
+    /* box-shadow: rgba(255, 0, 0, 0.16) 0px 3px 6px, rgba(63, 3, 3, 0.795) 0px 3px 6px; */
+    border: 10px solid #00000065;
+}
+
+.firstrow{
+    margin: 1% 5%;
+}
+
+.secoundrow,
+.thirdrow{
+    display: flex;
+    margin: 1% 5%;
+    justify-content: space-between;
+}
+
+.imagerow{
+    display: flex;
+    margin: 1% 5%;
+    justify-content: space-between;
+}
+
+.imagerow div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #e8e8e8;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    width: 45%;
+    height: fit-content;
+}
+
+.imagerow div canvas{
+    width: 100%;
+}
+
+.buttonsdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    
+}
+
+.buttonsdiv button{
+    border: 2px solid #e8e8e8;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px; 
+    font-family: 'Segoe Script', 'Comic Sans MS', cursive, sans-serif; 
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    cursor: pointer;
+}
+
+#messageInput{
+    border: 2px solid #e8e8e8;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    width: 70%;
+}
+
+.custum-file-upload {
+    width: calc(100% - 3rem);
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 20px;
+    fill: #e8e8e8;
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
+  @media screen and (max-width: 590px) {
+    .secoundrow{
+      flex-direction: column;
+    }
+
+    #messageInput{
+        width: calc(100% - 3rem);
+    }
+
+    .buttonsdiv{
+        width: auto;
+    }
+    .buttonsdiv button{
+        margin-top: 2%;
+    }
+
+    .box{
+        width: 90%;
+    }
+  }
+  .messageOutput {
+    background: rgba(0, 0, 0, 0.5); 
+    color: #ffffff;
+    border: 2px solid #e8e8e8;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Slightly transparent black background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 22% auto; /* Centers the modal vertically */
+    padding: 50px;
+    font-size: 28px;
+    align-content: center;
+    color: black;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Close Button Hover/Focus */
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
